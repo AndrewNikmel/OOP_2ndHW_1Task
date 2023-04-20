@@ -1,5 +1,5 @@
-public abstract class Raven extends Animal {
-    public Raven(String name){
+public abstract class Predator extends Animal {
+    public Predator(String name){
         super(name);
     }
 
