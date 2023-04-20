@@ -1,6 +1,6 @@
 public class Rabbit extends Herbivores {
-    
-    public Rabbit(String name){
+
+    public Rabbit(String name) {
         super(name);
     }
 
@@ -11,7 +11,7 @@ public class Rabbit extends Herbivores {
 
     @Override
     public String toString() {
-        
+
         return String.format("Rabbit %s", super.toString());
     }
 }

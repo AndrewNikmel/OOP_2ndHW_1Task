@@ -1,5 +1,5 @@
 public abstract class Herbivores extends Animal {
-    public Herbivores(String name){
+    public Herbivores(String name) {
         super(name);
     }
 

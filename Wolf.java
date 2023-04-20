@@ -1,6 +1,6 @@
 public class Wolf extends Predator {
-    
-    public Wolf(String name){
+
+    public Wolf(String name) {
         super(name);
     }
 
@@ -11,7 +11,7 @@ public class Wolf extends Predator {
 
     @Override
     public String toString() {
-        
+
         return String.format("Wolf %s", super.toString());
     }
 }

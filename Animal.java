@@ -1,11 +1,12 @@
-public abstract class Animal implements Sayable{
+public abstract class Animal implements Sayable {
     private String name;
 
-    public Animal(String name){
+    public Animal(String name) {
         this.name = name;
     }
 
-    // public abstract String say(); // we added interface sayable, so we do not have to use this method
+    // public abstract String say(); // we added interface sayable, so we do not
+    // have to use this method
 
     public abstract String feed();
 

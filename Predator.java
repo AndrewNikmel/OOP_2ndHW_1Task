@@ -1,5 +1,5 @@
 public abstract class Predator extends Animal {
-    public Predator(String name){
+    public Predator(String name) {
         super(name);
     }
 
