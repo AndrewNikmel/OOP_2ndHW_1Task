@@ -12,4 +12,18 @@ public class Zoo {
         listAnimal.add(animal);
         return this;
     }
+
+    private Radio radio;
+
+    public void setRadio(Radio radio){
+        this.radio = radio;
+    }
+    public List<Sayable> getSayable(){
+        List<Sayable> sayables = new ArrayList<>();
+        for (var item : listAnimal) {
+            sayables.add(item);
+        }
+        sayables.add(radio);
+        return sayables;
+    }
 }
