@@ -28,7 +28,7 @@ public class Zoo {
         return sayables;
     }
 
-    public List<Walk> walkable(){
+    public List<Walk> walkable() {
         List<Walk> walkable = new ArrayList<>();
         for (var item : listAnimal) {
             if (item instanceof Walk) {
@@ -38,7 +38,7 @@ public class Zoo {
         return walkable;
     }
 
-    public List<Flying> flyable(){
+    public List<Flying> flyable() {
         List<Flying> flyable = new ArrayList<>();
         for (var item : listAnimal) {
             if (item instanceof Flying) {
@@ -46,6 +46,26 @@ public class Zoo {
             }
         }
         return flyable;
+    }
+
+    public Walk winnerWalk(){
+        int index = 0;
+        for (int i = 0; i < walkable().size(); i++) {
+            if(walkable().get(i).speedForWalk() > walkable().get(index).speedForWalk()){
+                index = i;
+            }
+        }
+        return walkable().get(index);
+    }
+
+    public Flying winnerFlying(){
+        int index = 0;
+        for (int i = 0; i < flyable().size(); i++) {
+            if(flyable().get(i).speedForFlying() > flyable().get(index).speedForFlying()){
+                index = i;
+            }
+        }
+        return flyable().get(index);
     }
 
 }

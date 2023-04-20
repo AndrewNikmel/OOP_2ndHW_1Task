@@ -4,7 +4,8 @@ public class main {
         zoo.setRadio(new Radio());
         zoo.addList(new Wolf("Carlos"))
                 .addList(new Rabbit("Rojer"))
-                .addList(new Duck("Donald"));
+                .addList(new Duck("Donald"))
+                .addList(new Bat("Bruce Wayne"));
         // for (int i = 0; i < zoo.getListAnimal().size(); i++) {
         // System.out.println(zoo.getListAnimal().get(i));
         // }
@@ -18,17 +19,22 @@ public class main {
 
         }
 
-        System.out.println("Walkable are: ");
+        // System.out.println("Walkable are: ");
 
-        for (var item: zoo.walkable()) {
-            System.out.println(item.toString());
+        for (var item : zoo.walkable()) {
+            System.out.printf("%s - %d km/h\n", item.toString(), item.speedForWalk());
         }
 
-        System.out.println("Flyable are: ");
+        // System.out.println("Flyable are: ");
 
-        for (var item: zoo.flyable()) {
-            System.out.println(item.toString());
+        for (var item : zoo.flyable()) {
+            System.out.printf("%s - %d km/h\n", item.toString(), item.speedForFlying());
         }
+
+        System.out.println("------");
+        System.out.printf("Winner in walking is %s", zoo.winnerWalk());
+        System.out.println("\n ------");
+        System.out.printf("Winner in flying is %s", zoo.winnerFlying());
 
     }
 

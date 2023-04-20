@@ -14,10 +14,12 @@ public class Duck extends Herbivores implements Walk, Flying {
 
         return String.format("Duck %s", super.toString());
     }
+
     @Override
     public int speedForFlying() {
         return 80;
     }
+
     @Override
     public int speedForWalk() {
         return 10;
