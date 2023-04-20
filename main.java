@@ -18,6 +18,18 @@ public class main {
 
         }
 
+        System.out.println("Walkable are: ");
+
+        for (var item: zoo.walkable()) {
+            System.out.println(item.toString());
+        }
+
+        System.out.println("Flyable are: ");
+
+        for (var item: zoo.flyable()) {
+            System.out.println(item.toString());
+        }
+
     }
 
 }
