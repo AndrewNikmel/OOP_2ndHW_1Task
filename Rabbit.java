@@ -6,7 +6,7 @@ public class Rabbit extends Herbivores {
 
     @Override
     public String say() {
-        return "FyrFyr";
+        return "'Sniff-Sniff'";
     }
 
     @Override

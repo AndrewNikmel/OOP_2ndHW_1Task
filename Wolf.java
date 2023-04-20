@@ -6,7 +6,7 @@ public class Wolf extends Predator {
 
     @Override
     public String say() {
-        return "Uuuuu";
+        return "'Uuuuu'";
     }
 
     @Override
