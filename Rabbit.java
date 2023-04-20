@@ -1,4 +1,4 @@
-public class Rabbit extends Herbivores implements Walk{
+public class Rabbit extends Herbivores implements Walk {
 
     public Rabbit(String name) {
         super(name);
@@ -14,6 +14,7 @@ public class Rabbit extends Herbivores implements Walk{
 
         return String.format("Rabbit %s", super.toString());
     }
+
     @Override
     public int speedForWalk() {
         return 30;

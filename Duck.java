@@ -1,4 +1,4 @@
-public class Duck extends Herbivores implements Walk, Flying {
+public class Duck extends Herbivores implements Walk, Flying, Swimming {
 
     public Duck(String name) {
         super(name);
@@ -23,5 +23,10 @@ public class Duck extends Herbivores implements Walk, Flying {
     @Override
     public int speedForWalk() {
         return 10;
+    }
+
+    @Override
+    public int speedForSwimming() {
+        return 50;
     }
 }

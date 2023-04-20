@@ -48,24 +48,44 @@ public class Zoo {
         return flyable;
     }
 
-    public Walk winnerWalk(){
+    public List<Swimming> swimmable() {                                                             // hw
+        List<Swimming> swimmable = new ArrayList<>();                                               // hw
+        for (var item : listAnimal) {                                                               // hw
+            if (item instanceof Swimming) {                                                         // hw
+                swimmable.add((Swimming) item); // приведение (var) item into (walk)                // hw
+            }                                                                                       // hw
+        }                                                                                           // hw
+        return swimmable;                                                                           // hw
+    }                                                                                               // hw    
+
+    public Walk winnerWalk() {
         int index = 0;
         for (int i = 0; i < walkable().size(); i++) {
-            if(walkable().get(i).speedForWalk() > walkable().get(index).speedForWalk()){
+            if (walkable().get(i).speedForWalk() > walkable().get(index).speedForWalk()) {
                 index = i;
             }
         }
         return walkable().get(index);
     }
 
-    public Flying winnerFlying(){
+    public Flying winnerFlying() {
         int index = 0;
         for (int i = 0; i < flyable().size(); i++) {
-            if(flyable().get(i).speedForFlying() > flyable().get(index).speedForFlying()){
+            if (flyable().get(i).speedForFlying() > flyable().get(index).speedForFlying()) {
                 index = i;
             }
         }
         return flyable().get(index);
     }
+
+    public Swimming winnerSwimming() {                                                                      // hw
+        int index = 0;                                                                                      // hw
+        for (int i = 0; i < swimmable().size(); i++) {                                                      // hw            
+            if (swimmable().get(i).speedForSwimming() > swimmable().get(index).speedForSwimming()) {        // hw    
+                index = i;                                                                                  // hw
+            }                                                                                               // hw    
+        }                                                                                                   // hw
+        return swimmable().get(index);                                                                      // hw        
+    }                                                                                                       // hw
 
 }

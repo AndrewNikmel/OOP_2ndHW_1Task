@@ -1,4 +1,4 @@
-public class Wolf extends Predator implements Walk{
+public class Wolf extends Predator implements Walk {
 
     public Wolf(String name) {
         super(name);
@@ -14,6 +14,7 @@ public class Wolf extends Predator implements Walk{
 
         return String.format("Wolf %s", super.toString());
     }
+
     @Override
     public int speedForWalk() {
         return 30;
